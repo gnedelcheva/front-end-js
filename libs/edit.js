@@ -1,0 +1,3 @@
+require(['LocalStorage'] , function (LocalStorage) {
+
+});
