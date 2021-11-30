@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>BassicApp</title>
+      <title>Multi-Entity App</title>
       <script data-main = "libs/edit" src = "libs/require.js"></script>
       <script src = "libs/edit.js"></script>
       <meta charset="UTF-8" />
@@ -20,43 +20,54 @@
                   ></div>
                <!-- Col -->
                <div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-                  <h3 class="pt-4 text-2xl text-center">Create an Profile!</h3>
+                  <h3 class="pt-4 text-2xl text-center">Create a Ticket</h3>
                   <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded" id="myForm" action="index.html">
                      <div class="mb-4 md:flex md:justify-between">
                         <div class="mb-4 md:mr-2 md:mb-0">
-                           <label class="block mb-2 text-sm font-bold text-gray-700" for="firstName">
-                           First Name
+                           <label class="block mb-2 text-sm font-bold text-gray-700" for="Title">
+                           Title
                            </label>
                            <input
                               class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                              id="firstName"
+                              id="Title"
                               type="text"
-                              placeholder="First Name"
+                              placeholder=""
                               required="required"
                               value=""
                               />
                         </div>
                         <div class="md:ml-2">
-                           <label class="block mb-2 text-sm font-bold text-gray-700" for="lastName">
-                           Last Name
+                           <label class="block mb-2 text-sm font-bold text-gray-700" for="Description">
+                           Description
                            </label>
                            <input
                               class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                              id="lastName"
+                              id="Description"
                               type="text"
-                              placeholder="Last Name"
+                              placeholder=""
                               required="required"
                               value=""
                               />
                         </div>
                      </div>
                      <div class="relative mt-4">
-                        <label for="name" class="text-base leading-7 text-blueGray-500">Role</label>
+                        <label for="name" class="text-base leading-7 text-blueGray-500">Assigned</label>
                         <select class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2" 
-                                 id ="selectRole">
-                           <option selected="selected">Manager</option>
-                           <option>Developer</option>
+                                 id ="Assigned">
+                           <option selected="selected">Alex</option>
+                           <option>Venci</option>
+                           <option>Martin</option>
+                        </select>
+                     </div>
+                     <div class="relative mt-4">
+                        <label for="name" class="text-base leading-7 text-blueGray-500">Status</label>
+                        <select class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2" 
+                                 id ="Status">
+                           <option selected="selected">Development</option>
+                           <option>Todo</option>
                            <option>QA</option>
+                           <option>Testing</option>
+                           <option>Done</option>
                         </select>
                      </div>
                      <div class="pt-6 w-full flex space-x-2 justify-between">
