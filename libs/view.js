@@ -1,17 +1,16 @@
-require(['LocalStorage'] , function (LocalStorage) {
+require(['LocalStorage'], function (LocalStorage) {
+      const {
+            role,
+            firstName,
+            lastName
+      } = localStorage.getItem('person') ? JSON.parse(localStorage.getItem('person')) : {};
 
-      if (localStorage.getItem("firstName") === null) {//person, lastName or Role
-            $( '.profile' ).addClass('hidden');
-      }else{
-            $( '.no-profile' ).addClass('hidden');
+      if (!!firstName || !!lastName || !!role) { //person, lastName or Role
+            $('.no-profile').addClass('hidden');
+      } else {
+            $('.profile').addClass('hidden');
       }
 
-      if (localStorage.getItem('selectRole')) {
-            $('#selectRole').val(localStorage.getItem('selectRole'));
-      }
-   
-      document.getElementById("storedName").innerHTML = localStorage.getItem("firstName") + ' ' +localStorage.getItem("lastName");
-      document.getElementById("role").innerHTML = localStorage.getItem("selectRole");
-
-
+      document.getElementById("storedName").innerHTML = firstName + ' ' + lastName;
+      document.getElementById("role").innerHTML = role;
 });

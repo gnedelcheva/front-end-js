@@ -1,7 +1,15 @@
-require(['LocalStorage'] , function (LocalStorage) {
-         
-    document.getElementById("firstName").value = localStorage.getItem("firstName");
-    document.getElementById("lastName").value = localStorage.getItem("lastName");
-    document.getElementById("selectRole").value = localStorage.getItem("selectRole");
- 
+require(['LocalStorage'], function (LocalStorage) {
+    const {
+        role,
+        firstName,
+        lastName
+    } = localStorage.getItem('person') ? JSON.parse(localStorage.getItem('person')) : {};
+
+    if (!firstName || !lastName || !role) {
+        return;
+    }
+    document.getElementById("firstName").value = firstName;
+    document.getElementById("lastName").value = lastName;
+    document.getElementById("selectRole").value = role;
+
 });
